@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="defaultConfiguration" status="warn" strict="true" monitorInterval="5">
+    <Properties>
+        <Property name="patternlayout">%d %p %c{1.} [%t] %m%n</Property>
+    </Properties>
+    <Appenders>
+        <Appender name="Console" type="Console" target="SYSTEM_OUT">
+            <Layout type="PatternLayout" pattern="${patternlayout}"/>
+        </Appender>
+
+
+    </Appenders>
+
+    <Loggers>
+
+        <Root level="debug">
+            <AppenderRef ref="Console"/>
+        </Root>
+
+    </Loggers>
+</Configuration>

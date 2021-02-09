@@ -1,0 +1,29 @@
+electionTimeoutMinMs: 10000
+electionTimeoutMaxMs: 15000
+heartbeatIntervalMs: 1000
+nodeInfo:
+  id: node1
+  host: 192.168.0.222
+  port: 5670
+  name: node1
+log:
+  storage:
+    dbFile: jraft_data
+    options:
+      max_background_compactions: "4"
+      max_background_flushes: "2"
+    type: rocksdb
+meta:
+  dbFile: jraft_meta
+  type: rocksdb
+transport:
+  type: grpc
+peers:
+  - id: node2
+    host: 192.168.0.222
+    port: 5671
+    name: node2
+  - id: node3
+    host: 192.168.0.222
+    port: 5672
+    name: node3
